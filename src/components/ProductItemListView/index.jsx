@@ -203,7 +203,7 @@ const ProductItem = (props) => {
   return (
     <div className="productItem p-4 shadow-md bg-[#f1f1f1] rounded-md overflow-hidden border-1 border-[rgba(0,0,0,0.1)] flex items-center flex-col lg:flex-row">
       <div className="group imgWrapper w-full lg:w-[25%]  overflow-hidden  rounded-md relative">
-        <Link to={`/product/${props?.item?._id}`}>
+        <Link to={`/product/${props?.item?._id}`} className="link transition-all">
           <div className="img  overflow-hidden">
             <img
               src={props?.item?.images[0]}
@@ -218,6 +218,14 @@ const ProductItem = (props) => {
               />
             }
 
+          </div>
+        </Link>
+        <Link to={`/product/${props?.item?._id}`} className="link transition-all">
+          <div className="img  overflow-hidden">
+            <img
+              src={props?.item?.images[0]}
+              className="w-full"
+            />
           </div>
         </Link>
 
